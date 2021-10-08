@@ -1,0 +1,46 @@
+# one class perform one duty
+import math
+
+
+class Circle:
+    def __init__(self,radius):
+        self.radius = radius
+
+    def area(self):
+        return math.pi*(self.radius**2)
+
+
+class Square:
+    def __init__(self,lenght):
+        self.lenght = lenght
+
+    def area(self):
+        return self.lenght**2
+
+
+class AreaCalculator:
+    def __init__(self,arr = []):
+        self.arr = arr
+
+    def sum(self):
+        lis = []
+        for i in self.arr:
+            lis.append(i.area())
+        return lis
+
+    def output(self):
+        return self.sum()
+
+
+class VolumeCalculator(AreaCalculator):
+    def __init__(self,arr=[]):
+        super().__init__(arr)
+
+    def sum(self):
+        return self.arr
+
+    
+shapes = AreaCalculator([Circle(2),Square(5),Square(6)])
+print(shapes.sum())
+
+
