@@ -1,5 +1,6 @@
 from abc import ABC, abstractmethod
 
+
 #  This is interface for builder.
 class HouseBuilder(ABC):
 
@@ -22,6 +23,7 @@ class HouseBuilder(ABC):
     @abstractmethod
     def build(self) -> "House":
         pass
+
 
 # Targeted class which we want to create.
 # A house consist of walls, roof, door and window.
@@ -56,7 +58,7 @@ class BasicHouseBuilder(HouseBuilder):
 
     def set_wall(self, material: str) -> "HouseBuilder":
         self.house.walls = material
-        return  self
+        return self
 
     def set_roof(self, material: str) -> "HouseBuilder":
         self.house.door.material = material
@@ -78,9 +80,9 @@ class BasicHouseBuilder(HouseBuilder):
 
 builder = BasicHouseBuilder()
 # use this pattern make a chain, class should follow this chain to make house.
-house = builder.set_wall("Bricks")\
-    .set_roof("Tile")\
-    .set_door("Wood", "Brown")\
-    .set_window("Glass", "Large")\
+house = builder.set_wall("Bricks") \
+    .set_roof("Tile") \
+    .set_door("Wood", "Brown") \
+    .set_window("Glass", "Large") \
     .build()
 print(house)

@@ -8,7 +8,7 @@ Before learning desing pattern we should take deep knowledge about **Object Orie
 The key features of encapsulation:
 
 <ul>
-<li>An objects behavior is kept hedden from the outside world.</li>
+<li>An objects behavior is kept hidden from the outside world.</li>
 <li>Client not directly change internal state acting on them rather client can send request to object. According to this request object change state such as set and get .</li>
 <li>In python doesn't have public, private and protected keywords but accessibility can be made using __(double underscore) in the variable or function name.
 </ul>
@@ -18,23 +18,23 @@ The key features of polymorphism:
 
 <ul>
 <li>Two types of polymorphism:<ul>
-<li>An object provides differen implementation of the method based on input parameters.</li>
+<li>An object provides different implementation of the method based on input parameters.</li>
 <li>The same interface can be used by objects different types.</li>
 </ul></li>
 <li>In python polymorphism build in feature.For example: + operator can add two or more integers and also concate string</li>
 </ul>
 
 
-#### Inheritence
-The key features of inheritence:
+#### Inheritance
+The key features of inheritance:
 
 <ul>
-<li>Inheritence indicates that one class derives functionality from the parent class.</li>
-<li>Inheritence is describe as an option to resuse functionality of parent class.</li>
-<li>Inheritence creates hierarchy via the relationships among objects of different classes.</li>
+<li>Inheritance indicates that one class derives functionality from the parent class.</li>
+<li>Inheritance is described as an option to reuses functionality of parent class.</li>
+<li>Inheritance creates hierarchy via the relationships among objects of different classes.</li>
 </ul>
 
-#### Abstruct
+#### Abstract
 The key features of Abstruct:
 
 <ul>
@@ -54,7 +54,7 @@ The key features of Composition:
 ```python
 class A:
     def a1(self):
-        print("a1)
+        print("a1")
 
 class B:
     def b(self):
