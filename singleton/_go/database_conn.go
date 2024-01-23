@@ -2,13 +2,16 @@ package main
 
 import "fmt"
 
+// DatabaseConnection create database connection instance.
 type DatabaseConnection struct {
 	Connection string
 }
 
+// Initialize Db connection at once.
 var instance_ *DatabaseConnection
 
 func NewConnection() *DatabaseConnection {
+	// Check DatabaseConnection's has any instance or not.
 	if instance_ == nil {
 		instance_ = &DatabaseConnection{}
 	}
@@ -16,6 +19,9 @@ func NewConnection() *DatabaseConnection {
 }
 
 func (db *DatabaseConnection) Connect(databaseName string) string {
+	// if already connection established
+	//then no need assign new db name.
+	// rather send previous one.
 	if db.Connection == "" {
 		db.Connection = databaseName
 	}
